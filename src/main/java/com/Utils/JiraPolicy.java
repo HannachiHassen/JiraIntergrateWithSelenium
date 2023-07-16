@@ -1,7 +1,9 @@
 package com.Utils;
 
-public final class JiraPolicy {
+import java.lang.annotation.Retention;
+import java.lang.annotation.RetentionPolicy;
 
-	public JiraPolicy() {	}
-
+@Retention(RetentionPolicy.RUNTIME)
+public @interface JiraPolicy {
+	boolean logTicketReady();
 }
