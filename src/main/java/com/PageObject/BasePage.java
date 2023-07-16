@@ -5,7 +5,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
-public final class BasePage extends Page {
+public class BasePage extends Page {
 
 	public BasePage(WebDriver driver) {
 		super(driver);
@@ -23,15 +23,16 @@ public final class BasePage extends Page {
 
 	@Override
 	public WebElement getElement(By locator) {
-		WebElement element=null;
+		WebElement element = null;
 		try {
 			waitForElementPresent(locator);
-			element=driver.findElement(locator);
+			element = driver.findElement(locator);
 			return element;
 		} catch (Exception e) {
-			System.out.println("some error occurred while creating elment:" + locator.toString());
+			System.out.println("some error occurred while creating element " + locator.toString());
 			e.printStackTrace();
 		}
+
 		return element;
 	}
 
@@ -41,7 +42,7 @@ public final class BasePage extends Page {
 			wait.until(ExpectedConditions.presenceOfElementLocated(locator));
 		} catch (Exception e) {
 			System.out.println("some exception/error occurred while waiting for the element " + locator.toString());
-		}		
+		}
 	}
 
 	@Override
@@ -50,6 +51,6 @@ public final class BasePage extends Page {
 			wait.until(ExpectedConditions.titleContains(title));
 		} catch (Exception e) {
 			System.out.println("some exception/error occurred while waiting for the element " + title);
-		}		
+		}
 	}
 }
