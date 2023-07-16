@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="2" name="Failed suite [Suite]" guice-stage="DEVELOPMENT" verbose="3">
+  <listeners>
+    <listener class-name="com.Listeners.JiraListener"/>
+  </listeners>
+  <test thread-count="2" name="HubSpot Test chrome(failed)" verbose="3">
+    <parameter name="browser" value="chrome"/>
+    <classes>
+      <class name="com.Test.LoginTest">
+        <methods>
+          <include name="verfiyLoginPageHeaderTest"/>
+          <include name="verifyLoginPageTitleTest"/>
+          <include name="setUpTest"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.Test.LoginTest -->
+    </classes>
+  </test> <!-- HubSpot Test chrome(failed) -->
+</suite> <!-- Failed suite [Suite] -->
