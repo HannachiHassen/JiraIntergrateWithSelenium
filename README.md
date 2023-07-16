@@ -6,7 +6,7 @@ Among its many advantages, one of Selenium’s unique features is its extensibil
 
 Given that Jira is one of the most popular issue tracking and project management tools used by Agile development and testing teams, it is common for testers to integrate Selenium with Jira for greater efficiency and more accurate results.
 
-#### What is Jira?
+## What is Jira?
 
 Jira is a tool primarily used for bug and issue tracking. It also supports project management features for all kinds of use cases, from requirements and test case management to Agile software development. 
 
@@ -16,7 +16,7 @@ Jira also provides Rest API endpoints with which testers can automate multiple a
 
 The following sections will describe how to create API Tokens, how to use Jira API, and how to create issues with Selenium.
 
-#### How to Create API Token in Jira
+### How to Create API Token in Jira
 
 Jira API tokens allow a user to authenticate with cloud apps and bypass two-step verification and SSO in order to retrieve data from the instance through REST APIs. Token controls allow admins to view and revoke the use of API tokens by their managed accounts.
 
@@ -34,7 +34,7 @@ Steps to generate API token in Jira
  
 Note: After creating the API token don’t forget to copy and save the token in the text editor. The token is not accessible once the pop-up disappears.
 
-#### How to connect Selenium with Jira and log defects in Jira using Selenium
+### How to connect Selenium with Jira and log defects in Jira using Selenium
 
 Let’s start with the prerequisites
 
@@ -51,31 +51,25 @@ Now, let’s explore how to integrate Jira with Selenium and then log defects in
 
 > **Note**: Without this condition, projects end up with a lot of duplicate issues each time they re-run multiple tests.
 
-##### Step 1: Add required dependencies in pom.xml
+#### Step 1: Add required dependencies in pom.xml
 
 In order to Integrate Jira with Selenium, use rcarz Jira-client for simplicity. This is the wrapper built on top of the Jira Rest API Client.
 
 Navigate to pom.xml in the project, and add the following dependency:
 
-
-``` xml
+ ```xml
 <dependency>
-
-      <groupId>net.rcarz</groupId>
-
-      <artifactId>Jira-client</artifactId>
-
-      <version>0.5</version>
-
-      <scope>compile</scope>
-
- </dependency>
+    <groupId>net.rcarz</groupId>
+    <artifactId>Jira-client</artifactId>
+    <version>0.5</version>
+    <scope>compile</scope>
+</dependency>
 ```
 
 > **Note**: Take extra care when using the . notation as there could be many web elements on the HTML source with the same class attribute.
 
 
-##### Step 2: Create a utility to handle Jira issue
+#### Step 2: Create a utility to handle Jira issue
 
 Let’s create a package inside the main folder com.demo.utility, which will contain two classes
 
@@ -99,25 +93,25 @@ Let’s create a package inside the main folder com.demo.utility, which will con
  6. Look for the field Key. This is the short project Key
  7. Just copy and use it as a project key
  
-##### Step 3: Create Listener to notify test failures
+#### Step 3: Create Listener to notify test failures
 
 Create a listener so that each time a test fails, it should automatically create the Jira issue method. This listener keeps track of test failures and executes specified code.
 
-##### Step 4: Create basic tests using Selenium and Java
+#### Step 4: Create basic tests using Selenium and Java
 
 Let’s create some basic tests. This example creates There basic tests.
 
-##### Step 5: Configure the testng.xml file
+#### Step 5: Configure the testng.xml file
 
 Once we have all the required set up, we need to have a testng.xml file configured to run our tests. Our sample xml file looks like below. (You can use your existing testng.xml file to run your tests).
 
-##### Step 6: Execute your tests
+#### Step 6: Execute your tests
 
 Once setup is complete, execute the tests. Once tests are executed, any failures should automatically create a Jira ticket. After execution, view the result in the console.
 
 If everything is correct then after all Selenium tests run, it will create a Jira Issue, and the console will return as output – Ticket ID/Issue ID. It will also offer the URL to navigate to that particular issue.
 
-##### Step 7: Ensure ticket created in Jira
+#### Step 7: Ensure ticket created in Jira
 
 Let’s navigate to the Jira dashboard to check whether an issue has been created or not. In the Jira dashboard, click on the project dashboard to see if a new issue has been created
 
