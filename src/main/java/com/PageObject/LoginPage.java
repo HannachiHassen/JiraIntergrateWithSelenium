@@ -10,7 +10,7 @@ public final class LoginPage extends BasePage{
 		super(driver);
 	}
 	
-	private By emailId= By.className("username");
+	private By emailId= By.id("username");
 	private By password= By.id("password");
 	private By loginButton = By.id("loginBtn");
 	private By header = By.xpath("//i18n-string[@data-key='login.signupLink.text']");
