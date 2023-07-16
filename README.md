@@ -74,7 +74,7 @@ Navigate to pom.xml in the project, and add the following dependency:
 Let’s create a package inside the main folder com.demo.utility, which will contain two classes
 
  1. JiraServiceProvider: This class will have a method to create a Jira issue.
- 2. JiraCreateIssue: This contains custom annotation code.
+ 2. JiraPolicy: This contains custom annotation code.
  
  Important Points to remember when creating a JiraServiceProvider object:
 
