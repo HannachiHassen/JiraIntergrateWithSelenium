@@ -1,0 +1,14 @@
+version: 2
+updates:
+  - package-ecosystem: maven
+    directory: "/"
+    schedule:
+      interval: daily
+      time: "07:22"
+	ignore:
+      - dependency-name: "selenium"
+        # For Express, ignore all updates for version 4
+        versions: ["4.x"]
+    open-pull-requests-limit: 10
+    commit-message:
+      prefix: "mvn"
