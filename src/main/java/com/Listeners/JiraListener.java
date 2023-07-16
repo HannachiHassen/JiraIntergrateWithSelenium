@@ -26,7 +26,7 @@ public final class JiraListener implements ITestListener {
 			// raise jira ticket:
 			System.out.println("is ticket ready for JIRA: " + isTicketReady);
 			JiraServiceProvider jiraSp = new JiraServiceProvider("https://qajiratesting.atlassian.net",
-					"hassenhannachi07@gmail.com", 
+					"hannachihassen07@gmail.com", 
 					"ATATT3xFfGF058gtjaez6yDBfO_Vz5xoo4nK3VWRvkyTvH7OcMVfzjXYNmeyNGaMka21NeqnsNehraiBijeTXC1ARwsBV7xPRy2XE6blv_OG9GNnvMiUxpAcoNPT3H4hCSUcSo8N06vcQ7AGO_AVRLjqHO0tlQD92fw18d9rQR7uW9Evqug6Jto=D1AA01E3", 
 					"NAV");
 			String issueSummary = result.getMethod().getConstructorOrMethod().getMethod().getName()
