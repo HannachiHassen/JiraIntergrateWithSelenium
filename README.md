@@ -68,10 +68,14 @@ Navigate to pom.xml in the project, and add the following dependency:
 
 > **Note**: Take extra care when using the . notation as there could be many web elements on the HTML source with the same class attribute.
 
+#### Step 1: Create basic tests using Selenium and Java
 
-#### Step 2: Create a utility to handle Jira issue
+ - Create PageObject Package: BasePage, HomePage, LoginPage, Page
+ - Create some basic tests. In This example creates There basic tests in LoginTest.java class.
 
-Let’s create a package inside the main folder com.demo.utility, which will contain two classes
+#### Step 3: Create a utility to handle Jira issue
+
+Let’s create a package inside the main folder com.utils, which will contain two classes
 
  1. JiraServiceProvider: This class will have a method to create a Jira issue.
  2. JiraPolicy: This contains custom annotation code.
@@ -93,17 +97,13 @@ Let’s create a package inside the main folder com.demo.utility, which will con
  6. Look for the field Key. This is the short project Key
  7. Just copy and use it as a project key
  
-#### Step 3: Create Listener to notify test failures
+#### Step 4: Create Listener to notify test failures
 
 Create a listener so that each time a test fails, it should automatically create the Jira issue method. This listener keeps track of test failures and executes specified code.
 
-#### Step 4: Create basic tests using Selenium and Java
-
-Let’s create some basic tests. This example creates There basic tests.
-
 #### Step 5: Configure the testng.xml file
 
-Once we have all the required set up, we need to have a testng.xml file configured to run our tests. Our sample xml file looks like below. (You can use your existing testng.xml file to run your tests).
+Once we have all the required set up, we need to have a testng.xml file configured to run our tests.
 
 #### Step 6: Execute your tests
 
