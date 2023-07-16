@@ -10,15 +10,15 @@ import com.Utils.JiraServiceProvider;
 
 public final class JiraListener implements ITestListener {
 	
-	@Override
+
 	public void onTestStart(ITestResult result) {
 		
 	}
-	@Override
+
 	public void onTestSuccess(ITestResult result) {
 	
 	}
-	@Override
+	
 	public void onTestFailure(ITestResult result) {
 		JiraPolicy jiraPolicy = result.getMethod().getConstructorOrMethod().getMethod().getAnnotation(JiraPolicy.class);
 		boolean isTicketReady = jiraPolicy.logTicketReady();
@@ -37,23 +37,23 @@ public final class JiraListener implements ITestListener {
 			jiraSp.createJiraTicket("Bug", issueSummary, issueDescription, "Hassen");
 		}
 	}
-	@Override
+	
 	public void onTestSkipped(ITestResult result) {
 		
 	}
-	@Override
+	
 	public void onTestFailedButWithinSuccessPercentage(ITestResult result) {
 		
 	}
-	@Override
+	
 	public void onTestFailedWithTimeout(ITestResult result) {
 		onTestFailure(result);
 	}
-	@Override
+	
 	public void onStart(ITestContext context) {
 		
 	}
-	@Override
+	
 	public void onFinish(ITestContext context) {
 		
 	}

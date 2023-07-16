@@ -24,7 +24,7 @@ public class BaseTest {
 	public void setUpTest(String browser) {
 		if (browser.equalsIgnoreCase("chrome")) {
 			WebDriverManager.chromedriver().setup();
-			driver=new ChromeDriver();
+			driver = new ChromeDriver();
 		}
 		else if(browser.equalsIgnoreCase("ff")){
 			WebDriverManager.chromedriver().setup();
